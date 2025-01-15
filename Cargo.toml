@@ -1,0 +1,14 @@
+[package]
+name = "serde_hyprlang"
+authors = ["Lukas Lichten <lichtenrider98@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+categories = ["encoding", "parser-implementations"]
+description = "A hyprlang serialization file format"
+# documentation = ""
+keywords = ["hypr", "hyprlang", "serde", "serialization"]
+license = "MIT"
+repository = "https://github.com/LukasLichten/serde_hyprlang"
+
+[dependencies]
+serde = { version = "^1.0", default-features = false }
