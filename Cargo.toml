@@ -11,4 +11,7 @@ license = "MIT"
 repository = "https://github.com/LukasLichten/serde_hyprlang"
 
 [dependencies]
-serde = { version = "^1.0", default-features = false }
+serde = { version = "^1.0", default-features = false, features = ["std"] }
+
+[dev-dependencies]
+serde = { version = "1.0.194", features = ["derive"] }

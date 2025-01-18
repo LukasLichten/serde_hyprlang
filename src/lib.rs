@@ -5,7 +5,7 @@ pub use ser::{Serializer, to_string};
 
 pub type Result<T> = std::result::Result<T, Error>;
 
-#[derive(Debug,Clone)]
+#[derive(Debug,Clone,PartialEq)]
 pub enum Error {
     Message(String),
     NotSupported(&'static str),

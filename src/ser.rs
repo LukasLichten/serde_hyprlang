@@ -49,6 +49,7 @@ impl Serializer {
 
     fn pop_fieldname(&mut self) {
         self.fieldname.pop();
+        self.field_prefix_needed = true;
     }
     
     fn indent(&mut self) {
@@ -383,12 +384,13 @@ impl<'a> ser::SerializeSeq for &'a mut Serializer {
     }
 
     fn end(self) -> std::result::Result<Self::Ok, Self::Error> {
-        // We are producing an additional new line, but oh well
 
         if self.is_in_tupple() {
             return Err(Error::NotSupported("A sequence (Array/List/etc) contained inside a Tupple"));
 
-        } else {}
+        } else {
+            // We are producing an additional new line, but oh well
+        }
 
         Ok(())
     }
