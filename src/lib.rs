@@ -1,7 +1,10 @@
 mod de;
 mod ser;
+mod types;
 
+pub use de::from_str;
 pub use ser::{Serializer, to_string};
+pub use types::Vec2;
 
 pub type Result<T> = std::result::Result<T, Error>;
 
